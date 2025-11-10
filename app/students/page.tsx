@@ -258,7 +258,7 @@ export default function StudentsPage() {
     };
 
     return (
-        <div className="w-full min-h-screen bg-gray-50 p-4 md:p-6 lg:p-8">
+        <div className="w-full min-h-screen bg-gray-50 p-4 md:p-6 lg:p-8 mb-12">
             <div className="max-w-7xl  space-y-6">
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -279,14 +279,14 @@ export default function StudentsPage() {
                 </div>
 
                 {/* Stats Grid - Clickable */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {stats.map((stat) => {
                         const Icon = stat.icon;
                         const isActive = activeFilter === stat.id;
                         return (
                             <Card
                                 key={stat.id}
-                                className={`hover:shadow-md transition-all cursor-pointer ${isActive ? 'ring-2 ring-blue-500 shadow-md' : ''
+                                className={`hover:shadow-md transition-all cursor-pointer p-0 ${isActive ? 'ring-2 ring-blue-500 shadow-md' : ''
                                     }`}
                                 onClick={() => setActiveFilter(stat.id as FilterType)}
                             >

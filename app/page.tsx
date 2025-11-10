@@ -30,7 +30,7 @@ export default function Dashboard() {
   const stats = [
     {
       title: 'Total Students',
-      value: '2,847',
+      value: '229',
       change: '+12.5%',
       trend: 'up',
       icon: Users,
@@ -48,7 +48,7 @@ export default function Dashboard() {
     },
     {
       title: 'Attendance Rate',
-      value: '94.2%',
+      value: '94%',
       change: '-2.1%',
       trend: 'down',
       icon: TrendingUp,
@@ -57,7 +57,7 @@ export default function Dashboard() {
     },
     {
       title: 'Fee Collection',
-      value: '₹45.2L',
+      value: '₹45L',
       change: '+8.4%',
       trend: 'up',
       icon: DollarSign,
@@ -163,7 +163,7 @@ export default function Dashboard() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -209,7 +209,7 @@ export default function Dashboard() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-2 gap-6">
           {/* Recent Activity - Takes 2 columns */}
-          <Card className="lg:col-span-2">
+          <Card className="col-span-2">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
